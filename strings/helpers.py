@@ -6,6 +6,8 @@
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
+# by @Radenihboss
+# t.me/Jomblosuport & t.me/Jombloproject
 
 HELP_1 = """✅**<u>Admin Commands:</u>**
 
