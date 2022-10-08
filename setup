@@ -75,7 +75,7 @@ node(){
 
 repo(){
 	# Get git repo if the installer is runned standalone
-	[[ ! "Musikku" == $(basename -s .git `git config --get remote.origin.url`) ]] &&
+	[[ ! "JombloMusicBot" == $(basename -s .git `git config --get remote.origin.url`) ]] &&
 	git clone https: //github.com/Radenihbos/JombloMusicBot &&  cd JombloMusicBot
 }
 
