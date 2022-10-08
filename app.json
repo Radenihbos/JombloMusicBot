@@ -70,7 +70,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/Radenihbos/JombloMusic",
+        "value": "https://github.com/Radenihbos/JombloMusicBot",
         "required": true
       },
       "UPSTREAM_BRANCH": {
