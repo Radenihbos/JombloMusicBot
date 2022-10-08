@@ -52,7 +52,7 @@ packages(){
 			pprint "SUCCESS.\n\n" "cgreen"
 		else
 			pprint "FAIL.\n\n" "cred"
-			pprint "You need to install ffmpeg manually in order to use Musikku Bot, exiting..\n" "cblue"
+			pprint "You need to install ffmpeg manually in order to use JombloMusicBot Bot, exiting..\n" "cblue"
 			exit 1
 		fi
 	fi
@@ -76,7 +76,7 @@ node(){
 repo(){
 	# Get git repo if the installer is runned standalone
 	[[ ! "Musikku" == $(basename -s .git `git config --get remote.origin.url`) ]] &&
-	git clone https: //github.com/Radenihbos/JombloMusik &&  cd JombloMusik
+	git clone https: //github.com/Radenihbos/JombloMusicBot &&  cd JombloMusicBot
 }
 
 
@@ -90,7 +90,7 @@ installation(){
 }
 
 clear
-pprint "Selamat datang di Penginstal Pengaturan JombloMusik Bot\n\n"
+pprint "Selamat datang di Penginstal Pengaturan JombloMusic Bot\n\n"
 pprint "Jika Anda melihat kesalahan selama Proses Instalasi, Silakan merujuk ke file-file ini untuk log:"
 pprint "\nUntuk kesalahan node js , Periksa nodelog.txt"
 pprint "\nUntuk kesalahan paket pypi, Periksa pypilog.txt"
@@ -103,7 +103,7 @@ packages
 node
 repo
 installation
-pprint "\n\n\n\n\nJombloMusik Bot Installation selesai!" "cgreen"
+pprint "\n\n\n\n\nJombloMusic Bot Installation selesai!" "cgreen"
 sleep 4
 clear
 
@@ -137,6 +137,6 @@ SUPPORT_CHANNEL=$channel
 MUST_JOIN=$join
 OWNER_ID=$ownid""" > .env
 clear
-pprint "\n\n\nVars Anda telah berhasil disimpan!, Terima kasih telah menggunakan JombloMusik Installer, sekarang Anda dapat melanjutkan dengan memulai bot dengan bash start!"
+pprint "\n\n\nVars Anda telah berhasil disimpan!, Terima kasih telah menggunakan JombloMusicBot Installer, sekarang Anda dapat melanjutkan dengan memulai bot dengan bash start!"
 pprint "\n\n\nIngin lebih banyak vars?"
 pprint "\nCheckout config.py dan readme.md di dalam folder config untuk vars tambahan. Anda dapat mengubah semua gambar , Thumbs, mode dan semuanya dari vars. Lihat ke arah mereka\n\n"
