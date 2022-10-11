@@ -70,8 +70,8 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/Jombloproject"
-)  # Example:- https://t.me/Jombloproject 
+    "SUPPORT_CHANNEL", "https://t.me/Coffeecryptoairdrop"
+)  # Example:- https://t.me/Coffeecryptoairdrop 
 SUPPORT_GROUP = getenv(
     "SUPPORT_GROUP", "https://t.me/Jomblosuport"
 )  # Example:- https://t.me/Jomblosuport 
