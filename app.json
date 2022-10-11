@@ -90,7 +90,7 @@
       },
       "SUPPORT_CHANNEL": {
         "description": "Tautan Channel Dukungan jika ada, Biarkan kosong jika tidak ada dukungan. Tautan Anda harus dimulai dengan https://t.me/",
-        "value": "https://t.me/Jombloday",
+        "value": "https://t.me/Coffeecryptoairdrop",
         "required": false
       },
       "SUPPORT_GROUP": {
