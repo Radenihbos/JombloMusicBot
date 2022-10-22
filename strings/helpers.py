@@ -172,6 +172,6 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 **-assistant** : This will broadcast your message from assistant account of your bot.
 **-nobot** : This will force your bot to not broadcast message
 
-**Example:** `/guejomblo -user -assistant -pin Hello Testing`
+**Example:** `/guejomblobc -user -assistant -pin Hello Testing`
 
 """
