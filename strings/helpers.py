@@ -163,7 +163,7 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /authorized - Check all allowed chats of your bot.
 
 🌐**<u>BROADCAST FUNCTION:</u>**
-/guejomblobc [Message or Reply to a Message] - Broadcast any message to Bot's Served Chats.
+/broadcast [Message or Reply to a Message] - Broadcast any message to Bot's Served Chats.
 
 <u>options for broadcast:</u>
 **-pin** : This will pin your message 
@@ -172,6 +172,6 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 **-assistant** : This will broadcast your message from assistant account of your bot.
 **-nobot** : This will force your bot to not broadcast message
 
-**Example:** `/guejomblobc -user -assistant -pin Hello Testing`
+**Example:** `/broadcast -user -assistant -pin Hello Testing`
 
 """
