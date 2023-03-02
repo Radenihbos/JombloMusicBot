@@ -28,7 +28,7 @@ MONGO_DB_URI = getenv("MONGO_DB_URI")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "999")
+    getenv("DURATION_LIMIT", "9999")
 )  # Remember to give value in Minutes
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
@@ -62,7 +62,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Radenihbos/JombloMusic",
+    "https://github.com/Radenihbos/JombloMusicBot",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
